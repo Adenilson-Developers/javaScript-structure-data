@@ -48,3 +48,15 @@ valores [chave, valor] contidos no dicionário.
 dicionário. A função callbackFn tem dois parâmetros: key e value.
 Esse método também pode ser interrompido caso a função de callback
 devolva false (é semelhante ao método every da classe Array).
+
+
+
+## HashTable
+
+[•] put(key,value): esse método adiciona um novo item à tabela hash (ou
+pode atualizá-la também).
+
+[•] remove(key): esse método remove o value da tabela hash usando key.
+
+[•] get(key): esse método devolve um value específico encontrado com
+key
