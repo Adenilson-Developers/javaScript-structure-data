@@ -58,4 +58,20 @@ export default class binarySeachTree {
             callback(node.key);
         }
     }
+
+     // pesquisa de valores mínimos e máximos
+
+     min(){
+        return this.minNode(this.root);
+    }
+    /*O método min nos permite encontrar a chave mínima, apartir de qualquer
+    qualquer nó da chave. */
+    min(node){
+        let current = node;
+        while(current != null && current.left != null){
+            current = current.left;
+        }
+        return current;
+    }
+
 }
