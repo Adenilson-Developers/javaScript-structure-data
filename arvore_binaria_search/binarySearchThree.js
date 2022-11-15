@@ -31,4 +31,17 @@ export default class binarySeachTree {
             }
         }
     }
+
+    // Percurso em-ordem
+    inOrderTraverse(callback){
+        this.inOrderTraverseNode(this.root, callback);
+    }
+
+    inOrderTraverseNode(node, callback){
+        if(node != null){
+            callback(node.key);
+            this.inOrderTraverseNode(node.left, callback);
+            this.inOrderTraverseNode(node.right, callback);
+        }
+    }
 }
