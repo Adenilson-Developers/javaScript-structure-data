@@ -44,4 +44,18 @@ export default class binarySeachTree {
             this.inOrderTraverseNode(node.right, callback);
         }
     }
+
+     //percurso pos-ordem
+     postOrdemTraverse(callback){
+        this.postOrdemTraverseNode(this.root, callback);
+
+    }
+
+    postOrdemTraverseNode(node, callback){
+        if(node != null){
+            this.postOrdemTraverseNode(node.left, callback)
+            this.postOrdemTraverseNode(node.right, callback);
+            callback(node.key);
+        }
+    }
 }
